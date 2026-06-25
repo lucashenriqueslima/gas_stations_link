@@ -329,6 +329,10 @@ tbody tr:hover {
   line-height: 1.25;
 }
 
+.station-name {
+  min-width: 0;
+}
+
 .station-link:hover {
   color: #005c35;
   text-decoration: underline;
@@ -471,9 +475,124 @@ tbody tr:hover {
     min-width: 0;
   }
 
+  .table-wrap {
+    overflow-x: visible;
+  }
+
+  table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  thead th:first-child,
+  tbody td:first-child {
+    display: none;
+  }
+
+  .name-column {
+    width: 31%;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 19%;
+  }
+
+  th:nth-child(n + 4),
+  td:nth-child(n + 4) {
+    width: 12.5%;
+  }
+
   th,
   td {
-    padding: 15px 12px;
+    padding: 10px 3px;
+    font-size: 0.64rem;
+  }
+
+  th {
+    font-size: 0.55rem;
+  }
+
+  .sort-button {
+    gap: 2px;
+    min-height: 30px;
+  }
+
+  .sort-button svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .sort-placeholder {
+    font-size: 0.62rem;
+  }
+
+  .station-cell {
+    min-width: 0;
+    position: relative;
+  }
+
+  .station-link {
+    position: relative;
+    max-width: 100%;
+    gap: 0;
+    font-size: 0.67rem;
+  }
+
+  .station-link svg,
+  .external-icon {
+    display: none;
+  }
+
+  .station-name {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .station-link::after {
+    content: attr(data-full-name);
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 4px);
+    z-index: 5;
+    width: max-content;
+    max-width: min(260px, calc(100vw - 28px));
+    padding: 7px 9px;
+    border-radius: 8px;
+    background: #123327;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(18, 51, 39, 0.2);
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1.25;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition:
+      opacity 120ms ease,
+      transform 120ms ease;
+    white-space: normal;
+  }
+
+  .station-link:active::after,
+  .station-link:focus::after,
+  .station-link:focus-visible::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .station-brand {
+    margin-left: 0;
+    font-size: 0.58rem;
+  }
+
+  .distance-cell,
+  .price-cell {
+    font-size: 0.66rem;
+    letter-spacing: 0;
   }
 
   .loading-label {

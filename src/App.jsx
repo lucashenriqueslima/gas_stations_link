@@ -388,9 +388,16 @@ export default function App() {
                       <BrandBadge brand={station.bandeira} />
                     </td>
                     <td className="station-cell">
-                      <a href={googleMapsUrl(station)} target="_blank" rel="noreferrer" className="station-link">
+                      <a
+                        href={googleMapsUrl(station)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="station-link"
+                        title={station.name}
+                        data-full-name={station.name}
+                      >
                         <MapPin size={20} />
-                        <span>{station.name}</span>
+                        <span className="station-name">{station.name}</span>
                         <ExternalLink size={15} className="external-icon" />
                       </a>
                       <span className="station-brand">{station.bandeira || 'Branca'}</span>
