@@ -15,8 +15,8 @@ const FUEL_COLUMNS = [
 const EXTRA_STATIONS = [
   {
     id: 44,
-    name: 'Posto Solidy Buriti 13',
-    bandeira: 'Branca',
+    name: 'POSTO SOLIDY BURITI',
+    bandeira: 'Petrobras',
     lat: -16.741542,
     lng: -49.275273,
     et: '3,89',
@@ -26,7 +26,7 @@ const EXTRA_STATIONS = [
   },
   {
     id: 44,
-    name: 'Posto Solidy Padre Wendel 13',
+    name: 'POSTO Solidy Padre Wendel',
     bandeira: 'Branca',
     lat: -16.6608202,
     lng: -49.3087529,
